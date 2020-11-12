@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/bgboderbottom"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+     <LinearLayout
+         android:layout_width="100dp"
+         android:orientation="horizontal"
+         android:elevation="10dp"
+         android:layout_marginVertical="20dp"
+         android:layout_height="100dp">
+         <ImageView
+             android:id="@+id/food_image"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             app:srcCompat="@drawable/asiafood1" />
+     </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:orientation="vertical"
+         android:paddingHorizontal="20dp"
+         android:gravity="center_vertical"
+         android:layout_height="match_parent">
+         <TextView
+             android:id="@+id/name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textStyle="bold"
+             android:text="Float Cake VietNam"
+             android:paddingBottom="5dp"
+
+             android:textColor="#091020"
+             android:textSize="17sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/restorant_name"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/price"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:gravity="end"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="$6.05"
+                android:textColor="#000"
+                android:textSize="12sp" />
+        </LinearLayout>
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:gravity="center"
+             android:layout_height="wrap_content">
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/ic_baseline_star_24"
+                 android:layout_height="wrap_content"></ImageView>
+             <TextView
+                 android:id="@+id/rate"
+                 android:paddingLeft="5dp"
+                 android:layout_width="wrap_content"
+                 android:textColor="#000"
+                 android:textSize="12sp"
+                 android:layout_height="wrap_content"
+                 android:text="4.5"
+                 />
+         </LinearLayout>
+     </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

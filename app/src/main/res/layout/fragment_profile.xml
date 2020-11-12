@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#cc0000">
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài Khoản"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_search_24" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f6fa">
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:drawableStart="@drawable/ic_baseline_account_circle"
+                android:drawableEnd="@drawable/ic_baseline_navigate_next"
+                android:drawablePadding="16dp"
+                android:gravity="left|center_vertical"
+                android:padding="16dp"
+                android:text="Đăng nhập"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  >
+                  <Button
+                      android:id="@+id/button"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_local_offer_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="left|center_vertical"
+                      android:padding="16dp"
+                      android:text="Ví Voicher"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      tools:ignore="RtlCompat" />
+                  <Button
+                      android:id="@+id/button2"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_monetization_on_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="left|center_vertical"
+                      android:padding="16dp"
+                      android:text="Shopee Xu"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/button"
+                      tools:ignore="RtlCompat" />
+
+                  <Button
+                      android:id="@+id/button3"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_credit_card_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="left|center_vertical"
+                      android:padding="16dp"
+                      android:text="Thanh toán"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/button2"
+                      tools:ignore="RtlCompat" />
+                  <Button
+                      android:id="@+id/button4"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_location_on_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="left|center_vertical"
+                      android:padding="16dp"
+                      android:text="Địa chỉ"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/button3"
+                      tools:ignore="RtlCompat" />
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp">
+                  <Button
+                      android:id="@+id/button5"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="start|center_vertical"
+                      android:padding="16dp"
+                      android:text="Mời bạn bè"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      tools:ignore="RtlCompat" />
+
+                  <Button
+                      android:id="@+id/button6"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_help_outline_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="start|center_vertical"
+                      android:padding="16dp"
+                      android:text="Trung tâm hổ trợ"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/button5"
+                      tools:ignore="RtlCompat" />
+
+                  <Button
+                      android:id="@+id/button7"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_storefront_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="start|center_vertical"
+                      android:padding="16dp"
+                      android:text="Ứng dụng cho chủ quán"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/button6"
+                      tools:ignore="MissingConstraints,RtlCompat" />
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp">
+                  <Button
+                      android:id="@+id/button9"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_emoji_objects_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="start|center_vertical"
+                      android:padding="16dp"
+                      android:text="Chính sách quy định"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      tools:ignore="RtlCompat" />
+                  <Button
+                      android:id="@+id/button10"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/bt_profile"
+                      android:drawableStart="@drawable/ic_baseline_favorite_24"
+                      android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                      android:drawablePadding="16dp"
+                      android:gravity="start|center_vertical"
+                      android:padding="16dp"
+                      android:text="Cài đặt ứng dụng"
+                      android:textAllCaps="false"
+                      android:textSize="15sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/button9"
+                      tools:ignore="RtlCompat" />
+              </androidx.constraintlayout.widget.ConstraintLayout>
+          </LinearLayout>
+       </ScrollView>
+
+
+    </LinearLayout>
+</LinearLayout>
