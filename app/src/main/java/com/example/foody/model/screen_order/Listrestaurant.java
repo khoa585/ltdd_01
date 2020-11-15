@@ -1,12 +1,12 @@
 package com.example.foody.model.screen_order;
 
-public class listrestaurant {
+public class Listrestaurant {
     String name;
     Integer imageUrl;
     String category;
     String address;
 
-    public listrestaurant(String name, Integer imageUrl, String category, String address) {
+    public Listrestaurant(String name, Integer imageUrl, String category, String address) {
         this.name = name;
         this.imageUrl = imageUrl;
         this.category = category;

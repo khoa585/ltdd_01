@@ -2,53 +2,44 @@ package com.example.foody.model.screen_home;
 
 public class Product {
 
-    private String productName, address;
-    private int flagName;
-    private int price;
-
-    public Product(String productName, int flagName, String address, int price) {
-        this.productName= productName;
-        this.flagName= flagName;
-        this.address=address;
+    private String name,imageUrl,price,address;
+    public Product(String name, String imageUrl,String address,String price) {
+        this.name= name;
+        this.imageUrl= imageUrl;
         this.price= price;
+        this.address = address;
     }
 
-    public int getPrice() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int population) {
-        this.price = population;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-
-    public int getFlagName() {
-        return flagName;
-    }
-
-    public void setFlagName(int flagName) {
-        this.flagName = flagName;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    @Override
-    public String toString()  {
-        return this.productName+" "+ this.price;
     }
 }
 

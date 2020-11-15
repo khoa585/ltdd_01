@@ -1,4 +1,4 @@
-package com.example.foody.adapter.screen_home;
+package com.example.foody;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentStatePagerAdapter;

@@ -1,13 +1,13 @@
 package com.example.foody.model.screen_ship;
 
-public class AsiaFood {
+public class ShipFood {
     String name;
     String price;
     Integer imageUrl;
     String rating;
     String retorant_name;
 
-    public AsiaFood(String name, String price, Integer imageUrl, String rating, String retorant_name) {
+    public ShipFood(String name, String price, Integer imageUrl, String rating, String retorant_name) {
         this.name = name;
         this.price = price;
         this.imageUrl = imageUrl;

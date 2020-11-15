@@ -11,17 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foody.R;
-import com.example.foody.model.screen_order.orderFood;
-import com.example.foody.model.screen_ship.AsiaFood;
+import com.example.foody.model.screen_order.OrderFood;
 
 import java.util.List;
 
 public class NameorderAdapter extends RecyclerView.Adapter<NameorderAdapter.NameorderFoodViewHolder>{
     Context context;
-    List<orderFood> orderFoodList;
+    List<OrderFood> orderFoodList;
 
 
-    public NameorderAdapter(Context context, List<orderFood> orderFoodList) {
+    public NameorderAdapter(Context context, List<OrderFood> orderFoodList) {
         this.context = context;
         this.orderFoodList = orderFoodList;
     }

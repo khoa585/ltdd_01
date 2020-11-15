@@ -127,7 +127,7 @@
                       android:layout_width="0dp"
                       android:layout_height="wrap_content"
                       android:background="@drawable/bt_profile"
-                      android:drawableStart="@drawable/ic_baseline_location_on_24"
+                      android:drawableStart="@drawable/ic_baseline_location_on_24_back"
                       android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
                       android:drawablePadding="16dp"
                       android:gravity="left|center_vertical"

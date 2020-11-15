@@ -1,10 +1,10 @@
 package com.example.foody.model.screen_order;
 
-public class order_food_special {
+public class Order_food_special {
     String Describe;
     Integer imageUrl;
 
-    public order_food_special(String Describe,Integer imageUrl) {
+    public Order_food_special(String Describe, Integer imageUrl) {
         this.Describe = Describe;
         this.imageUrl = imageUrl;
     }

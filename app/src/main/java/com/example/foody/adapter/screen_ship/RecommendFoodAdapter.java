@@ -11,15 +11,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foody.R;
-import com.example.foody.model.screen_ship.AsiaFood;
+import com.example.foody.model.screen_ship.ShipFood;
 
 import java.util.List;
 
 public class RecommendFoodAdapter extends RecyclerView.Adapter<RecommendFoodAdapter.RecommendFoodViewHolder>{
     Context context;
-    List<AsiaFood> RecommendFoods;
+    List<ShipFood> RecommendFoods;
 
-    public RecommendFoodAdapter(Context context, List<AsiaFood> RecommendFoods) {
+    public RecommendFoodAdapter(Context context, List<ShipFood> RecommendFoods) {
         this.context = context;
         this.RecommendFoods = RecommendFoods;
     }

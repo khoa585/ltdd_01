@@ -10,10 +10,10 @@ import android.view.View;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.foody.R;
-import com.example.foody.adapter.screen_ship.AsiaFoodAdapter;
+import com.example.foody.adapter.screen_ship.ShipFoodAdapter;
 import com.example.foody.adapter.screen_ship.PopularFoodAdapter;
 import com.example.foody.adapter.screen_ship.RecommendFoodAdapter;
-import com.example.foody.model.screen_ship.AsiaFood;
+import com.example.foody.model.screen_ship.ShipFood;
 import com.example.foody.model.screen_ship.PopularFood;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import java.util.List;
 public class screen_ship extends AppCompatActivity {
     RecyclerView popular_recycler,asia_recycler,recommend_recycler;
     PopularFoodAdapter popularFoodAdapter;
-    AsiaFoodAdapter asiaFoodAdapter;
+    ShipFoodAdapter asiaFoodAdapter;
     RecommendFoodAdapter recommendFoodAdapter;
 
     @Override
@@ -52,30 +52,30 @@ public class screen_ship extends AppCompatActivity {
         setPopular_recycler(popularFoodList);
 
         //AsiaFood
-        List<AsiaFood> asiaFoodList = new ArrayList<>();
-        asiaFoodList.add(new AsiaFood("Chicago Pizza","$20",R.drawable.popularfood2,"4.5","Briand Restaurant"));
-        asiaFoodList.add(new AsiaFood("Straberry","$25",R.drawable.popularfood2,"4.0","Friends Restaurant"));
-        asiaFoodList.add(new AsiaFood("Cơm Chiên 73","$20",R.drawable.popularfood2,"5.0","Briand Restaurant"));
-        asiaFoodList.add(new AsiaFood("Straberry","$25",R.drawable.popularfood2,"4.0","Friends Restaurant"));
-        asiaFoodList.add(new AsiaFood("Chicago Pizza","$20",R.drawable.popularfood2,"5.0","Briand Restaurant"));
-        asiaFoodList.add(new AsiaFood("Straberry","$25",R.drawable.popularfood2,"4.0","Friends Restaurant"));
-        asiaFoodList.add(new AsiaFood("Chicago Pizza","$20",R.drawable.popularfood2,"5.0","Briand Restaurant"));
-        setAsia_recycler(asiaFoodList);
+        List<ShipFood> shipFoodList = new ArrayList<>();
+        shipFoodList.add(new ShipFood("Chicago Pizza","$30",R.drawable.discover_img_2,"4.5","Briand Restaurant"));
+        shipFoodList.add(new ShipFood("Straberry","$25",R.drawable.asiafood2,"4.0","Friends Restaurant"));
+        shipFoodList.add(new ShipFood("Cơm Chiên 73","$20",R.drawable.image_order_1,"5.0","Briand Restaurant"));
+        shipFoodList.add(new ShipFood("Straberry","$25",R.drawable.image_order_1,"4.0","Friends Restaurant"));
+        shipFoodList.add(new ShipFood("Chicago Pizza","$20",R.drawable.popularfood2,"5.0","Briand Restaurant"));
+        shipFoodList.add(new ShipFood("Straberry","$25",R.drawable.discover_img_2,"4.0","Friends Restaurant"));
+        shipFoodList.add(new ShipFood("Chicago Pizza","$20",R.drawable.popularfood2,"5.0","Briand Restaurant"));
+        setAsia_recycler(shipFoodList);
 
 
         //recommended
-        List<AsiaFood> recommended = new ArrayList<>();
-        recommended.add(new AsiaFood("Chicago Pizza","$20",R.drawable.asiafood1,"4.5","Briand Restaurant"));
-        recommended.add(new AsiaFood("Straberry","$25",R.drawable.asiafood1,"4.0","Friends Restaurant"));
-        recommended.add(new AsiaFood("Cơm Chiên 73","$20",R.drawable.asiafood1,"5.0","Briand Restaurant"));
-        recommended.add(new AsiaFood("Straberry","$25",R.drawable.asiafood1,"4.0","Friends Restaurant"));
-        recommended.add(new AsiaFood("Chicago Pizza","$20",R.drawable.asiafood1,"5.0","Briand Restaurant"));
-        recommended.add(new AsiaFood("Straberry","$25",R.drawable.asiafood1,"4.0","Friends Restaurant"));
-        recommended.add(new AsiaFood("Chicago Pizza","$20",R.drawable.asiafood1,"5.0","Briand Restaurant"));
+        List<ShipFood> recommended = new ArrayList<>();
+        recommended.add(new ShipFood("Chicago Pizza","$20",R.drawable.asiafood1,"4.5","Briand Restaurant"));
+        recommended.add(new ShipFood("Straberry","$25",R.drawable.asiafood2,"4.0","Friends Restaurant"));
+        recommended.add(new ShipFood("Cơm Chiên 73","$20",R.drawable.image_order_1,"5.0","Briand Restaurant"));
+        recommended.add(new ShipFood("Straberry","$25",R.drawable.asiafood2,"4.0","Friends Restaurant"));
+        recommended.add(new ShipFood("Chicago Pizza","$20",R.drawable.asiafood1,"5.0","Briand Restaurant"));
+        recommended.add(new ShipFood("Straberry","$25",R.drawable.discover_img_2,"4.0","Friends Restaurant"));
+        recommended.add(new ShipFood("Chicago Pizza","$20",R.drawable.image_order_1,"5.0","Briand Restaurant"));
         setrecommend_recycler(recommended);
 
         //backHome
-        findViewById(R.id.backhome).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.backhome_ship).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -93,16 +93,16 @@ public class screen_ship extends AppCompatActivity {
     }
 
     //AsiaFood
-    public void setAsia_recycler(List<AsiaFood> asiaFoodList ){
+    public void setAsia_recycler(List<ShipFood> shipFoodList){
         asia_recycler=findViewById(R.id.asia_recycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         asia_recycler.setLayoutManager(layoutManager);
-        asiaFoodAdapter = new AsiaFoodAdapter(this,asiaFoodList);
+        asiaFoodAdapter = new ShipFoodAdapter(this, shipFoodList);
         asia_recycler.setAdapter(asiaFoodAdapter);
     }
 
     //recommended
-    public void setrecommend_recycler(List<AsiaFood> recommended ){
+    public void setrecommend_recycler(List<ShipFood> recommended ){
         recommend_recycler = findViewById(R.id.recommend_recycler_);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
         recommend_recycler.setLayoutManager(layoutManager);

@@ -20,6 +20,7 @@
                 android:id="@+id/img"
                 android:layout_marginVertical="5dp"
                 android:layout_width="170dp"
+                android:scaleType="centerCrop"
                 android:layout_height="150dp"
                 android:layout_gravity="center"/>
             <TextView
@@ -27,7 +28,7 @@
                 android:layout_width="155dp"
                 android:layout_height="22dp"
                 android:text="Tên sản phẩm"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textColor="#000"
                 android:layout_marginTop="4dp" />
             <TextView

@@ -1,87 +1,78 @@
 package com.example.foody.adapter.screen_home;
 
 import android.content.Context;
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 import com.example.foody.R;
 import com.example.foody.model.screen_home.Product;
+import com.example.foody.View.View_screen_detail.screen_detail_food;
 
 import java.util.List;
 
-public class CustomGridAdapter extends BaseAdapter {
+public class CustomGridAdapter extends RecyclerView.Adapter<CustomGridAdapter.CustomGridViewHolder> {
+    Context context;
+    List<Product> lisProduct;
 
-    private List<Product> listData;
-    private LayoutInflater layoutInflater;
-    private Context context;
 
-    public CustomGridAdapter(Context aContext, List<Product> listData) {
-        this.context = aContext;
-        this.listData = listData;
-        layoutInflater = LayoutInflater.from(aContext);
+    public CustomGridAdapter(Context context, List<Product> lisProduct) {
+        this.context = context;
+        this.lisProduct = lisProduct;
+    }
+
+
+
+    @NonNull
+    @Override
+    public CustomGridAdapter.CustomGridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(context).inflate(R.layout.row_grid,parent,false);
+        return new CustomGridAdapter.CustomGridViewHolder(view);
     }
 
     @Override
-    public int getCount() {
-        return listData.size();
+    public void onBindViewHolder(@NonNull CustomGridAdapter.CustomGridViewHolder holder,final int position) {
+
+        holder.nameProduct.setText(lisProduct.get(position).getName());
+        holder.Address.setText(lisProduct.get(position).getAddress());
+        holder.Price.setText(lisProduct.get(position).getPrice());
+
+
+        Glide.with(context).load(lisProduct.get(position).getImageUrl()).into(holder.foodimage);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, screen_detail_food.class);
+                i.putExtra("name", lisProduct.get(position).getName());
+                i.putExtra("address", lisProduct.get(position).getAddress());
+                i.putExtra("price", lisProduct.get(position).getPrice());
+                i.putExtra("image", lisProduct.get(position).getImageUrl());
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
-    public Object getItem(int position) {
-        return listData.get(position);
+    public int getItemCount() {
+        return lisProduct.size();
     }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-        if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.row_grid, null);
-            holder = new ViewHolder();
-            holder.flagView = (ImageView) convertView.findViewById(R.id.img);
-            holder.productNameView = (TextView) convertView.findViewById(R.id.nameProduct);
-            holder.addressView = (TextView) convertView.findViewById(R.id.address);
-            holder.priceView = (TextView) convertView.findViewById(R.id.price);
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
+    public static final class CustomGridViewHolder extends RecyclerView.ViewHolder  {
+        ImageView foodimage;
+        TextView nameProduct,Address,Price;
+        public CustomGridViewHolder(@NonNull View itemView) {
+            super(itemView);
+            foodimage=itemView.findViewById(R.id.img);
+            nameProduct=itemView.findViewById(R.id.nameProduct);
+            Address=itemView.findViewById(R.id.address);
+            Price=itemView.findViewById(R.id.price);
         }
 
-        Product country = this.listData.get(position);
-        holder.productNameView.setText(country.getProductName());
-        holder.priceView.setText("" + country.getPrice());
-        holder.addressView.setText(country.getAddress());
-
-        int imageId = this.getMipmapResIdByName(country.getFlagName());
-
-        holder.flagView.setImageResource(imageId);
-
-        return convertView;
     }
-
-    // Find Image ID corresponding to the name of the image (in the directory mipmap).
-    public int getMipmapResIdByName(int resName)  {
-        String pkgName = context.getPackageName();
-
-        // Return 0 if not found.
-        int resID = context.getResources().getIdentifier(String.valueOf(resName), "mipmap", pkgName);
-        Log.i("CustomGridView", "Res Name: "+ resName+"==> Res ID = "+ resID);
-        return resID;
-    }
-
-    static class ViewHolder {
-        ImageView flagView;
-        TextView productNameView;
-        TextView priceView;
-        TextView addressView;
-    }
-
 }

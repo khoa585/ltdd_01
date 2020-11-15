@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.example.foody.model.screen_order.order_food_special;
+import com.example.foody.model.screen_order.Order_food_special;
 import com.example.foody.R;
 import java.util.List;
 
 public class OrderfoodpecialAdaper extends RecyclerView.Adapter<OrderfoodpecialAdaper.orderfoodpecialViewHolder>{
     Context context;
-    List<order_food_special> orderfoodspecialFoodList;
+    List<Order_food_special> orderfoodspecialFoodList;
 
-    public OrderfoodpecialAdaper(Context context, List<order_food_special> orderfoodspecialFoodList) {
+    public OrderfoodpecialAdaper(Context context, List<Order_food_special> orderfoodspecialFoodList) {
         this.context = context;
         this.orderfoodspecialFoodList = orderfoodspecialFoodList;
     }

@@ -9,5 +9,6 @@
     <color name="colorbg">#e63946</color>
     <color name="colorbgaction">#edf6f9</color>
     <color name="colorbg_">#e5e5e5</color>
-
+    <color name="black">#FF000000</color>
+    <color name="white">#FFF</color>
 </resources>

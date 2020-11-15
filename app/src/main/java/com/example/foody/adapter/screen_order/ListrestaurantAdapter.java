@@ -11,18 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foody.R;
-import com.example.foody.adapter.screen_ship.AsiaFoodAdapter;
-import com.example.foody.model.screen_order.listrestaurant;
-import com.example.foody.model.screen_order.orderFood;
+import com.example.foody.model.screen_order.Listrestaurant;
 
 import java.util.List;
 
 public class ListrestaurantAdapter extends RecyclerView.Adapter<ListrestaurantAdapter.ListrestaurantViewHolder>{
     Context context;
-    List<listrestaurant> listrestaurant;
+    List<Listrestaurant> listrestaurant;
 
 
-    public ListrestaurantAdapter(Context context,  List<listrestaurant> listrestaurant) {
+    public ListrestaurantAdapter(Context context,  List<Listrestaurant> listrestaurant) {
         this.context = context;
         this.listrestaurant = listrestaurant;
     }
